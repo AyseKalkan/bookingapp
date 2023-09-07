@@ -539,6 +539,7 @@ const PlacesScreen = () => {
       },
 
       headerTitleAlign: "center",
+      headerTintColor: "white",
     });
   }, []);
 
