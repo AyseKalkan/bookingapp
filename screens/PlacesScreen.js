@@ -92,10 +92,7 @@ const PlacesScreen = () => {
               image:
                 "https://cf.bstatic.com/xdata/images/hotel/max1280x900/433845673.jpg?k=24dd44dc2ac1bfda8aabdbff24571d211f42a4b5cf175fc9043113b61f57f670&o=&hp=1",
             },
-            {
-              id: "109",
-              image: "2",
-            },
+  
           ],
           rooms: [
             {
@@ -281,7 +278,7 @@ const PlacesScreen = () => {
               size: 419,
               refundable: "refundable",
               payment: "Pay at the property",
-              bed: "1 queen bed",
+              bed: "Pay at the property",
             },
             {
               id: "203",
@@ -487,6 +484,22 @@ const PlacesScreen = () => {
       ],
     },
   ];
+
+  const [items,setItems] = useState([]);
+  useEffect(() => {
+    if(items.length > 0) return;
+
+    const fetchProducts = async () => {
+      const colRef = collection(db,"places");
+
+      const docsSnap = await getDocs(colRef);
+      docsSnap.forEach((doc) => {
+        items.push(doc.data());
+      })
+    }
+
+    fetchProducts();
+  },[items]);
 
   const compare = (a,b) => {
     if(a.newPrice > b.newPrice){

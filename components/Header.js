@@ -31,7 +31,7 @@ export default function Header() {
             marginLeft: 8,
             fontWeight: "bold",
             color: "white",
-            fontsize: 15,
+            fontSize: 15,
           }}
         >
           Stays
@@ -44,7 +44,7 @@ export default function Header() {
             marginLeft: 8,
             fontWeight: "bold",
             color: "white",
-            fontsize: 15,
+            fontSize: 15,
           }}
         >
           Flights
@@ -57,7 +57,7 @@ export default function Header() {
             marginLeft: 8,
             fontWeight: "bold",
             color: "white",
-            fontsize: 15,
+            fontSize: 15,
           }}
         >
           Car Rental
@@ -70,7 +70,7 @@ export default function Header() {
             marginLeft: 8,
             fontWeight: "bold",
             color: "white",
-            fontsize: 15,
+            fontSize: 15,
           }}
         >
           Taxi
